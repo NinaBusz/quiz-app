@@ -4,14 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/style.css" />
+    <script src="/index.js" defer></script>
+    <link rel="stylesheet" href="/style.css" />
     <title>Quiz App Test</title>
   </head>
 
   <body>
     <header><h1>Quiz App</h1></header>
     <main>
-      <!--1.Karte-->
+      <!--1.Karte_____________________________________________________-->
       <section class="question-card">
         <h2 class="question-card__question">
           What property flips the axes in flexbox?
@@ -19,10 +20,14 @@
 
         <!--bookmark-button / SVG-->
 
-        <button type="button" class="question-card__bookmark">
+        <button
+          type="button"
+          class="question-card__bookmark--add"
+          data-js="bookmark-button"
+        >
           <svg
-            class="bookmark"
-            style="color: rgb(249, 58, 0)"
+            class="bookmark--red"
+            data-js="bookmark"
             xmlns="http://www.w3.org/2000/svg"
             width="80"
             height="80"
@@ -39,53 +44,19 @@
 
         <!--answer-button-->
 
-        <div class="question-card__button--Container">
-          <button type="button" class="question-card__button--answer">
-            show answer
-          </button>
-        </div>
-
-        <p class="question-card__answer">(Antwort) flex-direction</p>
-        <ul>
-          <li class="question-card__li">#Thema1</li>
-          <li class="question-card__li">#Thema2</li>
-          <li class="question-card__li">#Thema3</li>
-        </ul>
-      </section>
-
-      <!--2.Karte-->
-      <section class="question-card">
-        <h2 class="question-card__question">Lorem?</h2>
-
-        <!--bookmark-button / SVG-->
-
-        <button type="button" class="question-card__bookmark">
-          <svg
-            class="bookmark"
-            style="color: rgb(170, 170, 170)"
-            xmlns="http://www.w3.org/2000/svg"
-            width="80"
-            height="80"
-            fill="currentcolor"
-            class="bi bi-bookmark-fill"
-            viewBox="0 0 16 16"
+        <div class="question-card__button--Container" data-js="buttonContainer">
+          <button
+            type="button"
+            class="question-card__button--answer"
+            data-js="showHideToggle"
           >
-            <path
-              d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z"
-            ></path>
-          </svg>
-        </button>
-        <!--SVG Ende -->
-
-        <!--answer-button-->
-
-        <div class="question-card__button--Container">
-          <button type="button" class="question-card__button--answer">
             show answer
           </button>
         </div>
 
-        <p class="question-card__answer">(Antwort) Lorum!!!</p>
+        <p class="question-card__answer--hidden" data-js="answer">
+          flex-direction
+        </p>
         <ul>
           <li class="question-card__li">#Thema1</li>
           <li class="question-card__li">#Thema2</li>

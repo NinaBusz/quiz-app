@@ -5,14 +5,122 @@
 @import "/css/navigation.css";
 @import "/css/profile.css";
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
 h1 {
   text-align: center;
+}
+
+ul {
+  list-style-type: none;
+}
+
+header {
+  padding: 20px;
+  margin-top: 50px;
+  color: rgb(0, 0, 0);
+}
+
+main {
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+main > section {
+  border: solid 3px;
+  border-radius: 5px;
+  border-color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  margin-top: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 80px;
+  padding-right: 80px;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+
+  position: relative;
+}
+
+/* ___________________________________bookmark________________________________________*/
+
+.question-card__bookmark--add {
+  height: 30;
+  width: 30;
+  background-color: rgba(169, 27, 27, 0);
+  color: rgb(255, 0, 0);
+  position: absolute;
+  top: -15px;
+  right: 0%;
+  border: none;
+}
+
+.question-card__bookmark--remove {
+  height: 30;
+  width: 30;
+  background-color: rgba(169, 27, 27, 0);
+  color: rgb(137, 137, 137);
+  position: absolute;
+  top: -15px;
+  right: 0%;
+  border: none;
+}
+
+/* ___________________________________answer________________________________________*/
+
+.question-card__button--answer {
+  padding: 20px;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  border: solid 2px;
+}
+.question-card__button--answer:hover {
+  background-color: rgba(255, 112, 112, 0.374);
+}
+
+.question-card__answer--hidden {
+  display: none;
+}
+
+/* ____________________________________footer_________________________________________*/
+
+footer {
+  background-color: rgb(200, 200, 200);
+  position: sticky;
+  viewport-fit: bottom;
+  bottom: 0%;
+  right: 0%;
+}
+
+.navigation {
+  margin-top: 10px;
+  padding: 10px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  gap: 30px;
 }
 
 /*
 
 
-* {}
+
 
 * {
   box-sizing: border-box;
